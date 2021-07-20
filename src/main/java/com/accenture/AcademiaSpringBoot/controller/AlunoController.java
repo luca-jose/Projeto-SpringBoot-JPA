@@ -65,7 +65,7 @@ public class AlunoController {
 			alunoRepository.delete(oldAluno.get());
 			Aluno aluno = oldAluno.get();
 			aluno.setName(newAluno.getName());
-			aluno.setCurso(newAluno.getCpf());
+			aluno.setCurso(newAluno.getCurso());
 			aluno.setIdade(newAluno.getIdade());
 			alunoRepository.save(aluno);
 			
