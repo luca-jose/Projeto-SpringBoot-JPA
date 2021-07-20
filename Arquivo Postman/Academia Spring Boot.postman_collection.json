@@ -1,0 +1,286 @@
+{
+	"info": {
+		"_postman_id": "ac67c3a2-01d2-46c5-bf93-6eb828f87a9c",
+		"name": "Academia Spring Boot",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Aluno",
+			"item": [
+				{
+					"name": "Método View Specific",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"cpf\": \"123456\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8081/aluno/viewaluno/123456",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"aluno",
+								"viewaluno",
+								"123456"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Método View",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/aluno/view",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"aluno",
+								"view"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Método Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"cpf\": \"123456\",\r\n\"name\": \"Lucas\",\r\n\"curso\": \"Eng. da Computação\",\r\n\"idade\": 21\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/aluno/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"aluno",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Método Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"cpf\": \"123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/aluno/delete/123456",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"aluno",
+								"delete",
+								"123456"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Método Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"cpf\": \"123456\",\r\n\"name\": \"Lucas\",\r\n\"curso\": \"Eng. da Computação\",\r\n\"idade\": 38\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/aluno/update/123456",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"aluno",
+								"update",
+								"123456"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Professor",
+			"item": [
+				{
+					"name": "Método View Specific",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/professor/viewprofessor/123456",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"professor",
+								"viewprofessor",
+								"123456"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Método View",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/professor/view",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"professor",
+								"view"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Método Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"cpf\": \"123456\",\r\n\"name\": \"Lucas\",\r\n\"salario\": 2000,\r\n\"idade\": 45\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/professor/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"professor",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Método Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"cpf\": \"123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/professor/delete/123456",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"professor",
+								"delete",
+								"123456"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Método Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"cpf\": \"123456\",\r\n\"name\": \"Carlos\",\r\n\"salario\": 2000,\r\n\"idade\": 55\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/professor/update/123456",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"professor",
+								"update",
+								"123456"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
