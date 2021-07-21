@@ -2,6 +2,8 @@ package com.accenture.AcademiaSpringBoot.controller;
 
 import java.util.*;
 
+import javax.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -23,7 +25,7 @@ public class ProfessorController {
 
 	
 	@PostMapping("/create")
-	public Professor createProfessor(@RequestBody Professor professor) {
+	public Professor createProfessor(@Valid @RequestBody Professor professor) {
 		
 		return this.professorRepository.save(professor);
 

@@ -68,7 +68,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n\"cpf\": \"1234567\",\r\n\"name\": \"Lucas\",\r\n\"curso\": \"Eng. da Computação\",\r\n\"idade\": 24\r\n}",
+							"raw": "{\r\n\"cpf\": \"222222222222\",\r\n\"name\": \"Lucas\",\r\n\"curso\": \"Eng. da Computação\",\r\n\"idade\": 22\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -215,7 +215,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n\"cpf\": \"123456\",\r\n\"name\": \"Lucas\",\r\n\"salario\": 2000,\r\n\"idade\": 45\r\n}",
+							"raw": "{\r\n\"cpf\": \"11111111111\",\r\n\"name\": \"Lucas\",\r\n\"salario\": 2000,\r\n\"idade\": 45\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"

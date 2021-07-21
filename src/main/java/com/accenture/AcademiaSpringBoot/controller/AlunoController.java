@@ -1,7 +1,7 @@
 package com.accenture.AcademiaSpringBoot.controller;
 
 import java.util.*;
-
+import javax.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -24,8 +24,7 @@ public class AlunoController {
 
 	
 	@PostMapping("/create")
-	public Aluno createAluno(@RequestBody Aluno aluno) {
-		
+	public Aluno createAluno(@Valid @RequestBody Aluno aluno) {
 		return this.alunoRepository.save(aluno);
 
 	}
@@ -58,7 +57,7 @@ public class AlunoController {
 	}
 	
 	@PutMapping("/update/{id}")
-	public String updateAluno(@RequestBody Aluno newAluno, @PathVariable("id") int id) {
+	public String updateAluno (@RequestBody Aluno newAluno, @PathVariable("id") int id) {
 		
 		Optional<Aluno> oldAluno = this.alunoRepository.findById(id);
 		if (oldAluno.isPresent()) {
