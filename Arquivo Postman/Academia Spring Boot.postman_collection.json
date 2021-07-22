@@ -68,7 +68,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n\"cpf\": \"222222222222\",\r\n\"name\": \"Lucas\",\r\n\"curso\": \"Eng. da Computação\",\r\n\"idade\": 22\r\n}",
+							"raw": "{\r\n\"cpf\": \"45677777776\",\r\n\"name\": \"Lucas\",\r\n\"idade\": 22\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -76,7 +76,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8081/aluno/create",
+							"raw": "http://localhost:8081/aluno/create/31",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -84,7 +84,8 @@
 							"port": "8081",
 							"path": [
 								"aluno",
-								"create"
+								"create",
+								"31"
 							]
 						}
 					},
@@ -127,7 +128,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n\"cpf\": \"123456\",\r\n\"name\": \"Lucas\",\r\n\"curso\": \"Eng. da Computação\",\r\n\"idade\": 38\r\n}",
+							"raw": "{\r\n    \"id\": 43,\r\n    \"cpf\": \"45677777776\",\r\n    \"name\": \"Lucas\",\r\n    \"curso\": {\r\n        \"id\": 24,\r\n        \"name\": \"Ciência da Computação\"\r\n    },\r\n    \"idade\": 22\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -135,7 +136,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8081/aluno/update/26",
+							"raw": "http://localhost:8081/aluno/update/43/",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -144,7 +145,8 @@
 							"path": [
 								"aluno",
 								"update",
-								"26"
+								"43",
+								""
 							]
 						}
 					},
@@ -292,6 +294,60 @@
 								"professor",
 								"update",
 								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Curso",
+			"item": [
+				{
+					"name": "Método Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Engenharia da Computação\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/curso/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"curso",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Método View",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/curso/view",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"curso",
+								"view"
 							]
 						}
 					},

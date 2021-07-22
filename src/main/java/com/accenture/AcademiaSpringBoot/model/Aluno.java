@@ -4,6 +4,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotBlank;
@@ -29,7 +31,9 @@ public class Aluno {
 	private String cpf;	
 	@NotBlank(message= "Campo não preenchido")
 	private String name;
-	private String curso;
+	@ManyToOne
+	@JoinColumn(name = "curso_id")
+	private Curso curso;
 	@Min(value = 16, message = "Idade abaixo do permitido")
 	private int idade;
 	

@@ -12,7 +12,9 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import com.accenture.AcademiaSpringBoot.model.Aluno;
+import com.accenture.AcademiaSpringBoot.model.Curso;
 import com.accenture.AcademiaSpringBoot.repository.AlunoRepository;
+import com.accenture.AcademiaSpringBoot.repository.CursoRepository;
 
 @RestController
 @RequestMapping("/aluno")
@@ -21,10 +23,17 @@ public class AlunoController {
 
 	@Autowired
 	private AlunoRepository alunoRepository;
-
 	
-	@PostMapping("/create")
-	public Aluno createAluno(@Valid @RequestBody Aluno aluno) {
+	@Autowired
+	private CursoRepository cursoRepository;
+	
+	@PostMapping("/create/{id}")
+	public Aluno createAluno(@PathVariable("id") int id, @Valid @RequestBody Aluno aluno) {
+		Optional<Curso> cursoteste = this.cursoRepository.findById(id);
+		if(cursoteste.isPresent()) {
+			Curso curso = cursoteste.get();
+			aluno.setCurso(curso);
+		}
 		return this.alunoRepository.save(aluno);
 
 	}
