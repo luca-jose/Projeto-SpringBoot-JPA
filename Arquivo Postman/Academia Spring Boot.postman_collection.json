@@ -305,6 +305,47 @@
 			"name": "Curso",
 			"item": [
 				{
+					"name": "Método View Especific",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/curso/viewcurso/id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"curso",
+								"viewcurso",
+								"id"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Método View",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/curso/view",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"curso",
+								"view"
+							]
+						}
+					},
+					"response": []
+				},
+				{
 					"name": "Método Create",
 					"request": {
 						"method": "POST",
@@ -334,12 +375,21 @@
 					"response": []
 				},
 				{
-					"name": "Método View",
+					"name": "Método Delete",
 					"request": {
-						"method": "GET",
+						"method": "DELETE",
 						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
 						"url": {
-							"raw": "http://localhost:8081/curso/view",
+							"raw": "http://localhost:8081/curso/delete/1",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -347,7 +397,29 @@
 							"port": "8081",
 							"path": [
 								"curso",
-								"view"
+								"delete",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Método Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/curso/updatecurso/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"curso",
+								"updatecurso",
+								""
 							]
 						}
 					},
